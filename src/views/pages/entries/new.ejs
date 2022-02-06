@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="The M17 Event Guestbook." />
+    <title>Add new entry - M17 Guestbook</title>
+    <link rel="shortcut icon" href="../favicon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="../css/bootstrap.min.css" />
+  </head>
+  <body>
+    <%- include('../../partials/header'); -%>
+    <main>
+      <div class="container col-md-4">
+        <div class="card shadow-sm rounded">
+          <h5 class="card-header">Write a new entry</h5>
+          <div class="card-body">
+            <% if (error) { %>
+            <div class="alert alert-danger" role="alert">
+              <%- error.message -%>
+            </div>
+            <% } %>
+            <form method="POST">
+              <div class="form-group">
+                <label for="name">Name</label>
+                <input autofocus type="text" name="name" class="form-control" id="name" required />
+              </div>
+              <div class="form-group">
+                <label for="email">Email (not displayed publicly)</label>
+                <input type="email" name="email" class="form-control" id="email" required />
+              </div>
+              <div class="form-group">
+                <label for="comment">Comment</label>
+                <textarea name="comment" class="form-control" id="comment" rows="3" required ></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </main>
+    <%- include('../../partials/footer'); -%>
+    <script src="../js/jquery-3.5.1.slim.min.js"></script>
+    <script src="../js/bootstrap.bundle.min.js"></script>
+    <script>
+      $('footer').toggleClass('fixed-bottom');
+    </script>
+  </body>
+</html>

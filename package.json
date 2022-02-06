@@ -1,0 +1,32 @@
+{
+  "name": "m17-guestbook",
+  "version": "0.1.0",
+  "description": "The M17 Event Guestbook.",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js"
+  },
+  "keywords": [],
+  "author": {
+    "name": "KC1AWV - M17 Project",
+    "url": "https://m17project.org"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/M17-Project/m17-guestbook/issues"
+  },
+  "homepage": "https://github.com/M17-Project/m17-guestbook#readme",
+  "dependencies": {
+    "@hapi/joi": "^17.1.1",
+    "dotenv": "^8.6.0",
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "helmet": "^4.6.0",
+    "mongoose": "^5.13.7",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.12"
+  }
+}

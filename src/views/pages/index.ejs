@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="The M17 Event Guestbook." />
+    <title>Home - M17 Event Guestbook</title>
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+  </head>
+  <body>
+    <%- include('../partials/header'); -%>
+    <main>
+      <div class="container">
+        <div class="jumbotron shadow-sm">
+          <h1 class="display-4">Hello, HamCation 2022!</h1>
+          <p class="lead">
+            Thank you for visiting the M17 booth at HamCation 2022!
+          </p>
+          <p>
+            Please sign our guestbook, and we'll be sure to keep in touch!
+          </p>
+          <hr class="my-4" />
+          <div class="center">
+            <a class="center btn btn-primary btn-lg" href="/entries/new" role="button">
+              Sign the Guestbook
+            </a>
+          </div>
+        </div>
+        <div class="d-flex flex-wrap justify-content-center">
+          <img src="img/ori_logo.png" alt="ORI logo" style="width:300px;" />
+          <img src="img/m17_logo_shadow.svg" alt="M17 logo" style="width:300px;" />
+          <img src="img/ardc-square.png" alt="ARDC logo" style="width:300px;" />
+        </div>
+      </div>
+    </main>
+
+    <%- include('../partials/footer'); -%>
+
+    <script src="js/jquery-3.5.1.slim.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script>
+      $('footer').toggleClass('fixed-bottom');
+    </script>
+  </body>
+</html>
