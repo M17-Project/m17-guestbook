@@ -6,3 +6,4 @@ npm-debug.log*
 
 # misc
 .env
+package-lock.json
