@@ -5,6 +5,7 @@ const helmet = require('helmet');
 const logger = require('morgan');
 require('dotenv').config();
 
+const adminRouter = require('./routes/admin');
 const indexRouter = require('./routes/index');
 const entriesRouter = require('./routes/entries');
 
@@ -22,6 +23,8 @@ const app = express();
 
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
+
+app.use('/admin', adminRouter);
 
 app.use(helmet({ contentSecurityPolicy: false }));
 app.use(logger('dev'));
